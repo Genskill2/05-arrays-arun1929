@@ -20,7 +20,7 @@
   	int min=0;
   	for(int i=0;i<n;i++)
   	{
-  		if(m[i]>min)
+  		if(m[i]<min)
   			min=m[i];
   		else 
   			continue;
