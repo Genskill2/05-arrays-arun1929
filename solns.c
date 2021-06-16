@@ -32,13 +32,11 @@
    float average(int a[],int n)
   {
   	float average=0;
-  	int i;
+  	int i,sum=0;
   	for(i=0;i<n;i++)
-  	{
-  		if(a[i]/2==0)
-  			average=a[i];
-  		else 
-  			continue;
+  	{ 		
+  		sum=sum+a[i];
   	}
+  	average=sum/n;
   	return average;
   }
