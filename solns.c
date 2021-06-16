@@ -17,7 +17,7 @@
  //min
  int min(int m[],int n)
   {
-  	int min=0;
+  	int min=a[0];
   	for(int i=0;i<n;i++)
   	{
   		if(m[i]<min)
