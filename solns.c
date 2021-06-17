@@ -49,7 +49,7 @@
   	while(i<n)
   	{
   		if(n%i==0)
-  		  if(isprime(i)==1);
+  		  if(isprime(i)==1)
   		  {
   		  	a[count]=i;
   		  	count++;
@@ -71,8 +71,8 @@
   //prime
   int isprime(int i)
   {
-  	int flag=0,j;
-  		for(j=2;j<i;j++)
+  	int flag=0;
+  		for(int j=2;j<i;j++)
   		{
   			if(i%j==0)
   			{
