@@ -49,7 +49,7 @@
   	while(i<n)
   	{
   		if(n%i==0)
-  		  if(isprime(i)==1)
+  		  if(isprime(i)==1);
   		  {
   		  	a[count]=i;
   		  	count++;
@@ -67,6 +67,23 @@
   	}
   	return count;
   	
+  }
+  //prime
+  int isprime(int i)
+  {
+  	int flag=0,j;
+  		for(j=2;j<i;j++)
+  		{
+  			if(i%j==0)
+  			{
+  				flag=1;
+  				break;
+  			}
+  		}
+  		if(flag==0)
+  			return 1;
+  		else
+  			return 0;
   }
   
   
@@ -101,20 +118,4 @@
   	return flag;
   }
   
-  //prime
-  int isprime(int i)
-  {
-  	int flag=0,j;
-  		for(j=2;j<i;j++)
-  		{
-  			if(i%j==0)
-  			{
-  				flag=1;
-  				break;
-  			}
-  		}
-  		if(flag==0)
-  			return 1;
-  		else
-  			return 0;
-  }
+  
