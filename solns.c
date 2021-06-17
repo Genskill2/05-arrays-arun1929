@@ -79,7 +79,7 @@
   	for(int i=lmin;i<=lmax;i++)
   	{
   		int cout=0
-  		for (int j=0;j<n;j++)
+  		for(int j=0;j<n;j++)
   		{
   			if(a[j]==i)
   			 cout++;
