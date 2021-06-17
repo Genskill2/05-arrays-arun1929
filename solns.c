@@ -49,12 +49,12 @@
   	while(i<n)
   	{
   		if(n%i==0)
-  		  if(prime(i)==1)
+  		  if(isprime(i)==1)
   		  {
   		  	a[count]=i;
   		  	count++;
   		  	n=n/i;
-  		  	if(prime(n)==1)
+  		  	if(isprime(n)==1)
   		  	{
   		  		a[count++]=n;
   		  		break;
@@ -78,14 +78,14 @@
   	int counts[100],b=-1;
   	for(int i=lmin;i<=lmax;i++)
   	{
-  		int count=0
+  		int cout=0
   		for (int j=0;j<n;j++)
   		{
   			if(a[j]==i)
-  			 count++;
+  			 cout++;
   			 
   		}
-  		counts[++b]=count;
+  		counts[++b]=cout;
   	}
   	int cmax=0,flag=0;
   	for(int i=0;i<b;i++)
@@ -102,7 +102,7 @@
   }
   
   //prime
-  int prime(int i)
+  int isprime(int i)
   {
   	int flag=0,j;
   		for(j=2;j<i;j++)
