@@ -41,6 +41,8 @@
   	return average;
   }
   
+  
+  
   //factors
   int factors(int n,int a[])
   {
@@ -85,8 +87,6 @@
   		else
   			return 0;
   }
-  
-  
   //mode
   int mode(int a[],int n)
   {
@@ -94,8 +94,8 @@
   	int lmin=min(a,n);
   	int counts[100],b=-1;
   	for(int i=lmin;i<=lmax;i++)
-  	{
-  		int cout=0
+  		{
+  		int cout=0;
   		for(int j=0;j<n;j++)
   		{
   			if(a[j]==i)
@@ -119,3 +119,4 @@
   }
   
   
+ 
