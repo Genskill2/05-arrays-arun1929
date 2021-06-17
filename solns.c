@@ -75,23 +75,24 @@
   {
   	int lmax=max(a,n);
   	int lmin=min(a,n);
-  	int count[100],b=-1,i,j,cnt=0;
-  	for(i=lmin;i<=lmax;i++)
+  	int counts[100],b=-1;
+  	for(int i=lmin;i<=lmax;i++)
   	{
-  		for (j=0;j<n;j++)
+  		int count=0
+  		for (int j=0;j<n;j++)
   		{
   			if(a[j]==i)
-  			 cnt++;
+  			 count++;
   			 
   		}
-  		count[++b]=cnt;
+  		counts[++b]=count;
   	}
   	int cmax=0,flag=0;
   	for(int i=0;i<b;i++)
   	{
-  		if(count[i]>cmax)
+  		if(counts[i]>cmax)
   		{
-  			cmax=count[i];
+  			cmax=counts[i];
   			flag=i-(0-lmin);
   		}
   		else 
