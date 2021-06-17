@@ -1,22 +1,6 @@
 /* Enter your solutions in this file */
 #include <stdio.h>
-//prime
-  int isprime(int i)
-  {
-  	int flag=0;
-  		for(int j=2;j<i;j++)
-  		{
-  			if(i%j==0)
-  			{
-  				flag=1;
-  				break;
-  			}
-  		}
-  		if(flag==0)
-  			return 1;
-  		else
-  			return 0;
-  }
+
 //max
  int max(int m[],int n)
   {
@@ -58,6 +42,26 @@
   	return average;
   }
   
+  
+  
+  
+  //prime
+  int isprime(int i)
+  {
+  	int flag=0;
+  		for(int j=2;j<i;j++)
+  		{
+  			if(i%j==0)
+  			{
+  				flag=1;
+  				break;
+  			}
+  		}
+  		if(flag==0)
+  			return 1;
+  		else
+  			return 0;
+  }
   //factors
   
   int factors(int n,int a[])
@@ -86,36 +90,22 @@
   	return count;
   	
   }
-  
-  //mode
-  int mode(int a[],int n)
-  {
-  	int lmax=max(a,n);
-  	int lmin=min(a,n);
-  	int counts[100],b=-1;
-  	for(int i=lmin;i<=lmax;i++)
-  		{
-  		int cout=0;
-  		for(int j=0;j<n;j++)
-  		{
-  			if(a[j]==i)
-  			 cout++;
-  			 
-  		}
-  		counts[++b]=cout;
-  	}
-  	int cmax=0,flag=0;
-  	for(int i=0;i<b;i++)
-  	{
-  		if(counts[i]>cmax)
-  		{
-  			cmax=counts[i];
-  			flag=i-(0-lmin);
-  		}
-  		else 
-  			continue;
-  	}
-  	return flag;
-  }
-  
- 
+ int mode(int a[],int n)
+ {
+ 	int maxValue=0,maxCount=0,i,j;
+ 	for(i=0;i<n;i++)
+ 	{
+ 		int count=0;
+ 		for(j=0;j<n;j++)
+ 		{
+ 			if(a[j]==a[i])
+ 			count++;
+ 		}
+ 		if(count>maxCount)
+ 		{
+ 			maxCount=count;
+ 			maxValue=a[i];
+ 		}
+ 	}
+ 	return maxValue;
+ }
